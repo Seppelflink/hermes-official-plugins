@@ -18,7 +18,7 @@ TOOLS = {
 
 def test_manifest_identity_and_tools():
     # JSON is a YAML subset: keep this contract independent of a YAML package.
-    manifest = json.loads((ROOT / "plugin.yaml").read_text(encoding='utf-8'))
+    manifest = json.loads((ROOT / "plugin.json").read_text(encoding='utf-8'))
     assert manifest["name"] == "hermes-security"
     assert manifest["version"] == "0.1.3"
     assert manifest["license"] == "Apache-2.0"
@@ -29,7 +29,7 @@ def test_manifest_identity_and_tools():
 
 
 def test_product_brand_and_license():
-    manifest = (ROOT / "plugin.yaml").read_text(encoding='utf-8').lower()
+    manifest = (ROOT / "plugin.json").read_text(encoding='utf-8').lower()
     title = (ROOT / "README.md").read_text(encoding='utf-8').splitlines()[0].lower()
     for brand in ("openai", "codex"):
         assert brand not in manifest

@@ -31,7 +31,7 @@ build disjoint modules in parallel. It supersedes the original product plan (not
 ## Package layout (owner wave in brackets)
 
 ```
-plugin.yaml  pyproject.toml  __init__.py  README.md  LICENSE  NOTICE
+plugin.json  pyproject.toml  __init__.py  README.md  LICENSE  NOTICE
 THIRD_PARTY_NOTICES.md  UPSTREAM_PROVENANCE.json                     [W1-scaffold]
 hermes_security/
   __init__.py            (exports __version__ = "0.1.0")             [W1-scaffold]
